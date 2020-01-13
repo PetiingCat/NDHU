@@ -1,0 +1,15 @@
+Function Main
+    Output "99 multiplication table(Designer: 41053A041)"
+    Declare Integer i, j
+    
+    For j = 1 to 9
+        For i = 1 to 9
+            If i*j<10
+                Output i&"x"&j&"="&(i*j)&"   "
+            False:
+                Output i&"x"&j&"="&(i*j)&" "
+            End
+        End
+        Output ""
+    End
+End

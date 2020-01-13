@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-13 08:01:49 &#19979;&#21320;"/>
+        <attribute name="created" value="dXNlcjtMQVBUT1AtRzhQOUYwTVE7MjAxOS0xMC0xMzswNzoyODowMSDkuIvljYg7NDM5MTc="/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtRzhQOUYwTVE7MjAxOS0xMC0xMzswODowMTo0OSDkuIvljYg7MTs0NDAyOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;99 multiplication table(Designer: 41053A041)&quot;" newline="True"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <for variable="j" start="1" end="9" direction="inc" step="1">
+                <for variable="i" start="1" end="9" direction="inc" step="1">
+                    <if expression="i*j&lt;10">
+                        <then>
+                            <output expression="i&amp;&quot;x&quot;&amp;j&amp;&quot;=&quot;&amp;(i*j)&amp;&quot;   &quot;" newline="False"/>
+                        </then>
+                        <else>
+                            <output expression="i&amp;&quot;x&quot;&amp;j&amp;&quot;=&quot;&amp;(i*j)&amp;&quot; &quot;" newline="False"/>
+                        </else>
+                    </if>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

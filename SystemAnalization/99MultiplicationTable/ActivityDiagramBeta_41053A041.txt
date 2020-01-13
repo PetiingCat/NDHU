@@ -1,0 +1,19 @@
+姓名：張揆晧 學號：41053A041
+
+使用Plantuml.com Activity Diagram (beta)製作99乘法表活動圖
+圖片URL: http://www.plantuml.com/plantuml/png/LO_1QiCm44Jl-ef11o6N1cAQ7kmGI24DzEHlKDsjkqAMZBoY_VmAN-fUbc5c7knSLt5PoXpK9XJwhiDSWl0IU7J2AKBSUo05UwELfqYvnwazFZ-z74zjSwx4ZSRWCk4j2asKmO_mrV_-ua2mzvJXSK4BIUWQXNt0_mBqGv6b2DZe7ssyqHTjB3_uncZeim8eVcpqllmwt6tr3-dp43XIVUclLeMwrbC7_W80
+
+語法：
+@startuml
+start
+ :99 multiplication table
+ (Designer: 41053A041);
+ :Declare Integer i, j;
+ while (For j = 1 to 9)
+  while (For i = 1 to 9)
+   :Output i&"x"&j&"="&(i*j)&" ";
+  endwhile
+   :Output EOF(end-of-line);
+ endwhile
+end
+@enduml
