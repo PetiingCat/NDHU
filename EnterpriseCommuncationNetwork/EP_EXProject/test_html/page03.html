@@ -1,0 +1,180 @@
+<html>
+	<!--CSS:Framework-->
+	<style>
+		body{
+			position: relative;
+			overflow-x:hidden; 
+			overflow-y:hidden;
+			background-color: #FCE38A;
+			margin:0;
+			margin-top: 80px;
+			margin-bottom: 90px;
+			border: 0px;
+			padding: 0px;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+		}
+		header{
+			position: fixed;
+			  top: 0;
+			  left: 0;
+			background-color: #F38181;
+			height: 80px;
+			width: 100%;
+			text-align: center;
+			z-index:999;
+		}
+		/*#NavBar{
+			position: fixed;
+			  top: 80px;
+			  left: 0;
+			background-color: #95E1D3;
+			height: 40px;
+			width: 100%;
+		}*/
+		#NavBar{
+			position: fixed;
+			  bottom: 0;
+			  left: 0;
+			background-color: #95E1D3;
+			<!--80px-->height: 100px;
+			width: 100%;
+			font-size:30;
+		}
+		main{
+			position: relative;
+			  top: 0;
+			  left: 0;
+			background-color: #FCE38A;
+			width: 100%;
+			/*padding-top: 40px;*/
+		}
+		#FileList{
+			position: relative;
+			  top: 0;
+			  left: 0;
+			overflow: scroll;
+			background-color: #EAFFD0;
+			height:100%;
+			width:;
+			padding-top:1em;
+			padding-bottom:1em;
+		}
+	</style>
+	<!--CSS:Items-->
+	<style>
+		table, tr, th{
+			background-color:#FCE38A;
+			width:40%;
+			border:1px solid #000000;
+			border-collapse:collapse;
+			table-layout: fixed;
+			word-wrap:break-word;
+			font-size:25;
+			align: ecnter;
+		}
+		table .TableTitle{
+			background-color:#ffc700;
+			/*border-bottom-width:0px;*/
+		}
+	</style>
+	<!--HTML-->
+	<head>
+		<meta charset="utf-8">
+		<title>Page3.0</title>
+	</head>
+	<body>
+		<!--headline-->
+		<header>
+			<h1>HTTP:File Exchanger</h1>
+			<div id="NavBar">
+				<input id="id_n01" type="Button" value="按我新增" onclick="doit();"></input><br>
+				<a id="id_n02" onclick="doit2();" >點我刪除</a><br>
+				表格數量：<a id="id_n03" onclick="doit4();">~</a>
+			</div>
+		</header>
+		<!--main content-->
+		<main>
+			<div id="FileList">
+				<center>
+				<table id="id_tt">
+					<tr >
+						<th class="TableTitle">Name</th><th class="TableTitle">Download</th>
+					</tr>
+				</table>
+				<table id="id_tb"></table>
+				</center>
+			</div>
+		</main>
+	</body>
+</html>
+<script>
+var fg01=0,fg02=0, a=[],cnt=0,str1='',str2='',i;
+	function doit(){
+		if(fg01==0){
+			id_n01.value='被按了';
+			fg01=1;
+		}else{
+			id_n01.value='已新增表格';
+			fg01=0;
+		}
+		cnt++;
+		str1='<tr><th><a href="https:www.google.com.tw/">'+cnt+'</a></th><th></th></tr>';
+		a.push(str1);
+		id_n03.text=a.length;
+		doit3();
+	}
+	function doit2(){
+		if(fg02==0){
+			id_n02.text='被按了';
+			fg02=1;
+		}else{
+			id_n02.text='已刪除表格';
+			fg02=0;
+		}
+		if(cnt>0){cnt--;a.pop();}else cnt=0;
+		id_n03.text=a.length;
+		doit3();
+	}
+	function doit3(){
+		str1='';
+		for(i=0;i<cnt;i++){
+		str1+=a[i];}
+		document.getElementById('id_tb').innerHTML=str1;
+	}
+	function doit4(){
+		while(a.length!=0){a.pop();cnt--;}
+		str='';
+		id_n03.text=a.length;
+		document.getElementById('id_tb').innerHTML=str;
+	}
+	function generateTable(){
+		var str1='',str2='',i=0,cnt=0;
+		for(i=0;i<2;i++){
+			cnt=cnt+1;
+			str1='<tr><th><a href="https:www.google.com.tw/">'+cnt+'</a></th><th></th></tr>';
+			str2=str2+str1;
+		}
+		document.getElementById('id_tb').innerHTML=str2;
+	}
+	function main(){
+		id_n03.text=a.length;
+		//generateTable();
+	}
+	window.onload=main();
+</script>
+<!--
+	<style>
+		#id_f01{
+			border:3px green dotted;/*Parameter:border-color/border-width/border-style */
+		}
+	</style>
+		<div>
+			<form method="GET" action="" enctype="multipart/form-data">
+				File:<input type="file" id="id_f01" name="nm_f01"></input>
+				<input type="submit"></input>
+			</form>
+		</div>
+		#60203A #FFB566 #6B6800 #009E69 #ffc700
+-->

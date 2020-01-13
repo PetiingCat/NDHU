@@ -1,0 +1,42 @@
+<html>
+	<!--HTML-->
+	<head>
+		<title>Page4.1</title>
+		<meta charset="utf-8">
+		<!--CSS:Framework-->
+		<link rel="stylesheet" href="./css/framework.css" type="text/css">
+		<!--CSS:Items-->
+		<link rel="stylesheet" href="./css/table.css" type="text/css">
+	</head>
+	<body>
+		<!--headline-->
+		<header>
+			<h1>HTTP:File Exchanger</h1>
+			<div id="NavBar">
+				<form method="GET" action="http://127.0.0.1:7000" enctype="multipart/form-data">
+					<input type="file" id="id_f01" name="nm_f01"></input>
+					<input type="submit" value='上傳'></input>
+				</form>
+			</div>
+		</header>
+		<!--main content-->
+		<main>
+			<div id="FileList">
+				<center>
+				<table id="id_tt">
+					<tr >
+						<th class="TableTitle">FileName</th><th class="TableTitle">Download</th>
+					</tr>
+				</table>
+				<table id="id_tb"></table>
+				</center>
+			</div>
+		</main>
+	</body>
+</html>
+<!--Javascript-->
+<script>
+/*%Echo%*/
+str='<tr><th>%FileName%</th><th><a href="127.0.0.1:7000/%FileName%">Download</a></th></tr>';
+document.getElementById('id_tb').innerHTML=str;
+</script>

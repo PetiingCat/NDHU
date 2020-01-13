@@ -1,0 +1,34 @@
+<html>
+<style>
+.sun {heighr:100;}
+#m01 {width:100;}
+
+</style>
+<script>
+var flag=0;
+function doit(){
+	/*var pp=document.getElementById("d01");
+	pp.innerText="NoNo";*/
+	var pp=document.getElementById("m01");
+	pp.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtTQRoasH2vIESOzwsmTg-LWLfGjdRxK8-4M_k2AHretPOJroog&s";
+}
+function doit2(){
+	var pp=document.getElementById("m01");
+	pp.src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&w=1000&q=80";
+}
+function FF(){
+	doit();
+	/*doit2();*/
+}
+</script>
+
+<div id="d01" onclick="doit();">HI!</div>
+<img id="m01" class="sun" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/07/17/20/the-sun-stars-and-earth.jpg" 
+	 onmouseover="doit2();"></img>
+<img id="m02" class="sun" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/07/17/20/the-sun-stars-and-earth.jpg" 
+	 onmouseover="doit2();"></img>
+<img id="m03" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/07/17/20/the-sun-stars-and-earth.jpg" 
+	 onmouseover="doit2();"></img>
+<br><button id="b01" onclick="FF();">Change</button>
+
+</html>

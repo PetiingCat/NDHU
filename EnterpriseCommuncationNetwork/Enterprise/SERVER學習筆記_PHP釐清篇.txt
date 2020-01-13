@@ -1,0 +1,7 @@
+本次製作的是HTTP Server，沒有PHP邊一回傳功能。
+
+<<名詞釐清>>：
+HTML是一種文字排版顯示格式、HTTP是收發傳遞資料的溝通規範(有固定的格式)，PHP在後端伺服器(server)執行的腳本語言，功能強大，支持多執行緒運算，server必須安裝環境才能運作，並非瀏覽器能直接解讀，通常會轉譯成HTML檔傳回給bowser。javascript是前端語言，若瀏覽器有支援就能執行，可以用邏輯函式方便呈現網頁。CSS是前端的語言，透過類別得方式可以統一宣告設定多個物件的屬性。
+
+<<HTTP與php的運作>>
+瀏覽器透過HTML的form表單以HTTP協定的GET、POST回傳之後，若指定「IP-host/xxx.php?var1=?&var2=?&...」，瀏覽器便會傳送HTTP封包給SERVER。其中，php?後面的「var1=?&var2=?&...」會以串流(stream)的形式附在封包的字串之後。當server會將收到的變數訊息交給php程式編譯、運算，之後再以html的型態回傳給bowser。

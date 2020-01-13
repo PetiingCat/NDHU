@@ -1,0 +1,24 @@
+<html>
+<head>
+		<title>URLChanger</title>
+		<meta charset="utf-8">
+</head>
+<!--引用jQuery核心-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	function urlchanger(){
+		var s = document.getElementById('ipt');
+		var str = s.value;
+		var ss = str.replace(/\\/g, "/");/*正則運算式:/XXX/g*/
+		document.write(ss);
+	}
+</script>
+
+<form name='form' id='form'>
+	<input type="text" id="ipt" name="nm_ipt"></input>
+	<input type="button" id="bt" name="bt" value="execute" onclick="urlchanger();"></input>
+</form>
+
+
+
+</html>

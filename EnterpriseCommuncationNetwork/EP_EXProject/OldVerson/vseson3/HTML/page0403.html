@@ -1,0 +1,120 @@
+<html>
+	<!--CSS:Framework-->
+	<style>
+		body{
+			position: relative;
+			overflow-x:hidden; 
+			overflow-y:hidden;
+			background-color: #FCE38A;
+			margin:0;
+			margin-top: 80px;
+			margin-bottom: 90px;
+			border: 0px;
+			padding: 0px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+					box-sizing: border-box;
+		}
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #F38181;
+			height: 80px;
+			width: 100%;
+			text-align: center;
+			z-index:999;
+		}
+		/*#NavBar{
+			position: fixed;
+			top: 80px;
+			left: 0;
+			background-color: #95E1D3;
+			height: 40px;
+			width: 100%;
+		}*/
+		#NavBar{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background-color: #95E1D3;
+			height: 80px;
+			width: 100%;
+			font-size:30;
+		}
+		main{
+			position: relative;
+			top: 0;
+			left: 0;
+			background-color: #FCE38A;
+			width: 100%;
+			/*padding-top: 40px;*/
+		}
+		#FileList{
+			position: relative;
+			top: 0;
+			left: 0;
+			overflow: scroll;
+			background-color: #EAFFD0;
+			height:100%;
+			width:;
+			padding-top:1em;
+			padding-bottom:1em;
+		}
+	</style>
+	<!--CSS:Items-->
+	<style>
+		table, tr, th{
+			background-color:#FCE38A;
+			width:40%;
+			border:1px solid #000000;
+			border-collapse:collapse;
+			table-layout: fixed;
+			word-wrap:break-word;
+			font-size:25;
+			align: ecnter;
+		}
+		table .TableTitle{
+			background-color:#ffc700;
+			/*border-bottom-width:0px;*/
+		}
+	</style>
+	<!--HTML-->
+	<head>
+		<title>Page4.1</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<!--headline-->
+		<header>
+			<h1>HTTP:File Exchanger</h1>
+			<div id="NavBar">
+				<form method="POST" action="http://127.0.0.1:7000" enctype="multipart/form-data">
+					<input type="file" id="id_f01" name="nm_f01"></input>
+					<input type="submit" value='上傳'></input>
+				</form>
+			</div>
+		</header>
+		<!--main content-->
+		<main>
+			<div id="FileList">
+				<center>
+				<table id="id_tt">
+					<tr >
+						<th class="TableTitle">FileName</th><th class="TableTitle">Download</th>
+					</tr>
+				</table>
+				<table id="id_tb"></table>
+				</center>
+			</div>
+		</main>
+	</body>
+</html>
+<!--Javascript-->
+<script>
+var str='';
+/*%Echo%*/
+//str+="<tr><th>%FileName%</th><th><a href=\"http://www.google.com.tw\">Download</a></th></tr>";
+document.getElementById('id_tb').innerHTML=str;
+</script>

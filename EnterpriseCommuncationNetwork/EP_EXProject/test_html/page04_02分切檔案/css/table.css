@@ -1,0 +1,14 @@
+table, tr, th{
+	background-color:#FCE38A;
+	width:40%;
+	border:1px solid #000000;
+	border-collapse:collapse;
+	table-layout: fixed;
+	word-wrap:break-word;
+	font-size:25;
+	align: ecnter;
+}
+table .TableTitle{
+	background-color:#ffc700;
+	/*border-bottom-width:0px;*/
+}

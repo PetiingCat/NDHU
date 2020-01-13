@@ -1,0 +1,132 @@
+object Form1: TForm1
+  Left = 895
+  Top = 88
+  Width = 643
+  Height = 693
+  Caption = 'FileWebServer_41053A041'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 11
+  object Label1: TLabel
+    Left = 0
+    Top = 235
+    Width = 627
+    Height = 22
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'System Message'
+    Color = clGradientActiveCaption
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Forte'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object Label2: TLabel
+    Left = 0
+    Top = 0
+    Width = 627
+    Height = 22
+    Align = alTop
+    Alignment = taCenter
+    BiDiMode = bdLeftToRight
+    Caption = 'File Folder'
+    Color = clMoneyGreen
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Forte'
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object Label3: TLabel
+    Left = 0
+    Top = 89
+    Width = 627
+    Height = 22
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Operation Watching'
+    Color = clSkyBlue
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Forte'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object ListBox1: TListBox
+    Left = 0
+    Top = 257
+    Width = 627
+    Height = 397
+    Align = alClient
+    Font.Charset = CHINESEBIG5_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Fixedsys'
+    Font.Style = []
+    ItemHeight = 16
+    ParentFont = False
+    TabOrder = 0
+  end
+  object FLB: TFileListBox
+    Left = 0
+    Top = 22
+    Width = 627
+    Height = 67
+    Align = alTop
+    Font.Charset = CHINESEBIG5_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Fixedsys'
+    Font.Style = []
+    ItemHeight = 16
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ListBox2: TListBox
+    Left = 0
+    Top = 111
+    Width = 627
+    Height = 124
+    Align = alTop
+    Font.Charset = CHINESEBIG5_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Fixedsys'
+    Font.Style = []
+    ItemHeight = 16
+    ParentFont = False
+    TabOrder = 2
+  end
+  object TCPS: TIdTCPServer
+    Active = True
+    Bindings = <>
+    CommandHandlers = <>
+    DefaultPort = 7000
+    Greeting.NumericCode = 0
+    MaxConnectionReply.NumericCode = 0
+    OnExecute = TCPSExecute
+    ReplyExceptionCode = 0
+    ReplyTexts = <>
+    ReplyUnknownCommand.NumericCode = 0
+    Left = 8
+    Top = 360
+  end
+end

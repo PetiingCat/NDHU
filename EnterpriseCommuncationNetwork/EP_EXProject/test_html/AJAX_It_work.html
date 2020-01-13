@@ -1,0 +1,30 @@
+<html>
+<script>
+	function doit(){
+		document.getElementById("id_input_text").value="已送出";
+	}
+</script>
+
+	<head><meta charset="utf-8"></head>
+	<body>    
+	
+	<form action="http://127.0.0.1:7000" method="GET" target="n_iframe">   
+		<input type="text" id="id_input_text" name="n_input_text"/>    
+		<input type="submit" onclick="doit();"/>    
+	</form>    
+		
+	<iframe id="id_iframe" name="n_iframe" style="display:none;"></iframe>    
+	
+	</body>    
+</html> 
+
+<!--something important
+　　JS:document.forms[0].target="rfFrame"; 
+	JQuery:$("#f2").attr("target","rfFrame");
+	
+	frameset:https://finalfrank.pixnet.net/blog/post/9910705
+	iframe:https://www.webdesigns.com.tw/html_iframe.asp
+-->
+
+
+  

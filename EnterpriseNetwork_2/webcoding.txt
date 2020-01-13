@@ -1,0 +1,3 @@
+1 https://www.astralweb.com.tw/full-screen-backround-image/ 滿版背景圖
+2 隱藏主選單
+3 http://www.flycan.com/article/css/css-layout-2113.html CSS滿版網頁教學
