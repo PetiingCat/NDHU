@@ -1,2 +1,2 @@
 # NDHU
-Class Practice
+Campus Learning and Practice
