@@ -2,7 +2,8 @@ MIPS Sort(Quick sort) in QtSpim
 ========
 Problem description:
 --------
-Sorting a sequence of positive integers enter from the console with one number in one line. The end of the sequence is indicated by a 0 (zero). Then print the sorted result to the console.
+Sorting a sequence of positive integers enter from the console with one number in one line. The end of the sequence is indicated by a 0 (zero). Then print the sorted result to the console.  
+
 Highligh:
 --------
 - I'm follow the c++ quicksort code in ( http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html ), if you not good at quicksort, this is the reference.
