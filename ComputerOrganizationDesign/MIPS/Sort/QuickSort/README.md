@@ -16,9 +16,13 @@ Highligh:
 - Please **follow the rule of MIPS GPR**, that is a manegement of saving data and transfering data. i.e. argument register uses in being assigned, or temparary register uses in a situation of neighbor lines(one is save, anther is send, so qucklly, it will not be change value in the job).
 - This sorting code will use **loop**, **if-then-else**, **recursion**, **array**, **memory access** with assembly language.
 
+Listing
+--------
+[studentid-hw3-2.s](https://github.com/PetiingCat/NDHU/blob/master/ComputerOrganizationDesign/MIPS/Sort/QuickSort/studentid-hw3-2.s)  
+
 Demo(test and run):
 --------
-![image](https://github.com/PetiingCat/NDHU/blob/master/ComputerOrganizationDesign/MIPS/Sort/QuickSort/demo.gif)
+![testing image gif](https://github.com/PetiingCat/NDHU/blob/master/ComputerOrganizationDesign/MIPS/Sort/QuickSort/demo.gif)
 ## Assembly Language Code:
 --------
 ```s
