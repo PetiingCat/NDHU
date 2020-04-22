@@ -18,7 +18,7 @@ Highligh:
 
 Demo(test and run):
 --------
-![image](https://drive.google.com/file/d/13wX5wV4BDm3nlLZ1ak2fvJAnu_QerH5t/view?usp=sharing)
+![image](https://github.com/PetiingCat/NDHU/blob/master/ComputerOrganizationDesign/MIPS/Sort/QuickSort/demo.gif)
 ## Assembly Language Code:
 --------
 ```s
