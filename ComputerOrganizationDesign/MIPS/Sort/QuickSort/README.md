@@ -6,7 +6,7 @@ Sorting a sequence of positive integers enter from the console with one number i
 
 Highligh:
 --------
-- I'm follow the c++ quicksort code in ( http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html ), if you not good at quicksort, this is the reference.
+- I followed the c++ quicksort code in ( http://alrightchiu.github.io/SecondRound/comparison-sort-quick-sortkuai-su-pai-xu-fa.html ), if you not good at quicksort, this is the reference.
 - Be careful of procedure **Partition**, which is also a **non-leaf procedure**, has a callee "**swap**". So be sure to use **lw** and **sw** with memory stack to protect rigisters' values in Partition. 
 - Remember that memory is sequencial that claiming variables or labels in *.data section*  have to **reverse order**. Especially, **Array** must in last one because adding locations will overhead the original data(if code in sequence).
 - Using **procedure call** must watchout whether the **arguments** will be **re-endue value**. If that so, use $s0~$s7 to save $a0~$a3 at **begining** of the procedure.
