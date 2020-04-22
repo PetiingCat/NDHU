@@ -1,4 +1,4 @@
-# MIPS Fibonacci Recursive(run in QTspim)
+# MIPS Fibonacci Recursive(run in QtSpim)
 ### \# ---int Fibonacci(int n) start--- \#  
 **fibonacci:**  
 _\# Prologue: before caller switch to callee, store the variable of caller_   
