@@ -1,3 +1,29 @@
+#--------------------#
+#	algorithm: QuickSort
+#	version: Recursion
+#	Designer: 41053A041 Kuihao Chang
+#	Describe: This sorting is that:
+#		1. picking a pivot in the array
+#		2. regard array[0] as Low side, array[array.length - 1] as High side 
+#		3. let two flags(or call pointers) which are i and j.  
+#			i records the last position of value which is less than pivot.
+#			j, scaning every value from Lo to Hi, which records the current position.
+#			If j is less than or equal to pivot, then swap i and j.
+#			Repeat above until i stop and j meet Hi
+#			then we find a good position for piovt, swap pivot and i+1, this is "LoHi-sandwich method". yummy~ 0w0
+#		4. Now array is divide in three part, left-array, mid-Pillar and right-array.    
+#		5. Choose a new pivot(i.e. means of current array, first one or last one), then repeat above until finish the sorting.
+#		6. Time Complexity: Ο(n log n)~Ο(n2)  Space Complexity: Ο(log n) ~ Ο(n)
+#
+#	Register interpretation:
+#	$s0: array[0]'s address.
+#	$s1: array.length
+#	$t0: temp don't care it
+#	$t1: temp don't care it
+#	$t2: temp don't care it
+#	$a0, $a1 is transfering variable.
+#--------------------#
+
 .data
 	prompt0: .asciiz "Welcome to Quick Sorting Service.\n"
 	prompt1: .asciiz "Please enter a number into ready-sort array.(enter 0 to end the input process)\n"
