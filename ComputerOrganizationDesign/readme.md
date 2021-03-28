@@ -1,0 +1,1 @@
+# QtSpim 匯入檔案時，務必點選 file/Reinitialize and load file，不然 main 起始點會瘋狂跳錯

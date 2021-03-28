@@ -42,20 +42,59 @@
 #	}
 #
 #-----------------------------#
-%%%%% not edit %%%%%
-	
+#
+# left(front):0
+# right(end):length-1
+# pivot:(3)
+#	index:	0 1 2 3 4
+#			3 5 4 2 8
+#			3 2 4 5 8
+#			2 3 4 5 8
+#			2|3|4 5 8
+#			2|3|4|5 8
+#			2|3|4|5|8		 
+#			        p
+#			        l
+#			        r
+#
+#-----------------------------#
 	.data
-Array:		.word	86, 177, 40, 77, 60, 45, 136, 73, 57, 95, 8, 170, 98, 1, 158, 95, 150, 55, 68, 138, 85, 172, 61, 198, 135
-Array_size:	.space	4
+msg_input: .asciiz "Please key in a number to add in array.(type 0 to end the input)\n"
 msg_before:	.asciiz	"before : "
 msg_after:	.asciiz "after : "
 msg_space:	.asciiz " "
 msg_newL:	.asciiz "\n"
+Array_size:	.space	0
+Array:		.word	0
 
 	.text
 	.globl main
 
 main:
+
+## Input start:
+	la		$s0, Array
+	lw		$s1, Array_size
+
+InputNumber:
+# Print prompt
+	li		$v0, 4
+	la		$a0, msg_input
+	syscall
+	
+# Read integer
+	li		$v0, 5
+	syscall
+	
+	beq		$v0, $zero, exit_input # input 0 -> break Loop
+	
+	sw		$v0, 0($s0) # v0(input) -> array[]
+	addi	$s0, $s0, 4 # v0+=4 -> array[index++]
+	addi	$s1, $s1, 1 # array.length++
+	
+	b		InputNumber #Input Loop
+## End of input;
+
 
 # store the number of elements
 	la		$t0, Array_size
@@ -63,7 +102,7 @@ main:
 	sub		$t2, $t0, $t1
 	srl		$t2, $t2, 2
 	sw		$t2, 0($t0)
-	
+
 # print "before : "
 	li		$v0, 4
 	la		$a0, msg_before
@@ -261,3 +300,9 @@ Loop_quick1_done:
 	lw		$s2, 8($sp)		# load s2
 	addi	$sp, $sp, 24	# Adjest sp
 	jr		$ra
+	
+#-------- Discussion ---------#
+# array.length = array[tail+1]. then   (or use c's method to get, which is (array's size)/(array[0]'size))
+#  array.length = array[tail+1]'addr - array[0]'addr
+#
+#

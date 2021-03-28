@@ -1,0 +1,57 @@
+	Recursive-Descent Parsing
+	void A() {
+1) 		Choose an A-production, A -+ X1 X2 . . . Xk ;
+2) 		for ( i = 1 to k ) {
+3) 			if ( Xi is a nonterminal )
+4) 					call procedure Xi O ;
+5) 			else if ( Xi equals the current input symbol a )
+6) 				advance the input to the next symbol;
+7) 			else /* an error has occurred * / ;
+		}
+	}
+	
+	procedure MATCH(ts, token)
+		if ts.PEEK()=token
+		then call ts.ADVENCE()
+		else call ERROR(Expected token)
+	end
+	
+	procedure S(ts)
+		switch()
+			case ts.PEEK()O{num, (, $}
+				call V()
+				call MATCH(ts, $)
+	end
+	
+	procedure V(ts)
+		switch()
+			case ts.PEEK()O{num}
+				call MATCH(ts, num)
+			case ts.PEEK()O{$, (, )}
+				call MATCH(ts, ()
+				call E()
+				call MATCH(ts, ))
+	end
+	
+	procedure E(ts)
+		switch()
+			case ts.PEEK()O{+}
+				call MATCH(ts, +)
+				call V()
+				call V()
+			case ts.PEEK()O{*, )}
+				call MATCH(ts, *)
+				call W()
+	end
+	
+	procedure W(ts)
+		switch()
+			case ts.PEEK()O{num, (}
+				call V()
+				call W()
+			case ts.PEEK()O{)}
+				return()
+	end
+	
+
+	
